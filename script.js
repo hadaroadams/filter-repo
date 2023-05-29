@@ -142,15 +142,12 @@ function filt(categ){
 
 function search(e){
     products.innerHTML=''
-    console.log(database)
     database.filter((item)=>{ 
         if(item.title.toUpperCase().includes(e.target.value.toUpperCase())){
             let inner =contentMakeUp(item.id,item.title,item.price)
             products.appendChild(inner)
             console.log(item)
             
-        }else{
-            console.log("heyya")
         }
         
     })
